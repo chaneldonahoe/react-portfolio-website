@@ -71,3 +71,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 Video : https://www.youtube.com/watch?v=3HNyXCPDQ7Q 
+
+
+// TODO:
+- BETTER QUALITY AVATAR PICTURE 
+- FIX DYNAMICNESS FOR LARGER SCREENS 

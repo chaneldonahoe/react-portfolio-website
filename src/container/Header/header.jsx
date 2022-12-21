@@ -8,7 +8,7 @@ import './header.scss';
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
-    opacity: [0, 1],
+    opacity: 1,
     transition: {
       duration: 1,
       ease: 'easeInOut',
@@ -20,7 +20,7 @@ const header = () => (
   <div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="app__header-info"
     >
       <div className="app__header-badge">
@@ -41,12 +41,19 @@ const header = () => (
 
     <motion.div
       whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 0.5, delayChildren: 0.5 }}
+      transition={{ duration: 2, delayChildren: 0.5 }}
       className="app__header-img"
     >
       <img src={images.profile} alt="profile_bg" />
-
+      <motion.img
+        whileInView={{ scale: [0, 1] }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        src={images.circle}
+        alt="profile_circle"
+        className="overlay_circle"
+      />
     </motion.div>
+
 
     <motion.div
       variants={scaleVariants}
